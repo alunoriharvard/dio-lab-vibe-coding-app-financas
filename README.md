@@ -1,89 +1,139 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# 💸 EduCoin Play: Educação financeira escolar gamificada. Criada em vibe coding por Evandro.
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
+PRD refinano do Copilot Web:
 
-## ✨ O que é Vibe Coding
+````Markdown
+# PRD – EduCoin Play
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+## 1. Objetivo
+Ensinar conceitos básicos de dinheiro para crianças de 6 a 12 anos, de forma lúdica e gamificada.  
+O app deve ser simples, divertido e incluir uma tela de análise de desempenho após o uso.
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+## 2. Perfis de Usuário
 
-## 🎯 Desafio
+### Aluno
+- Login: Nome / Idade / Turma
+- Permissões:
+  - Jogar missões
+  - Visualizar saldo e progresso
+  - Receber feedback positivo
+  - Consultar perfil financeiro (Explorador, Guardião, Equilibrado)
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+### Professor
+- Login: Usuário / Senha
+- Permissões:
+  - Visualizar desempenho dos alunos por turma
+  - Aplicar ações financeiras (bônus, multa, resetar progresso)
+  - Personalizar missões com filtros de interesse (Aventura, Arte, Tecnologia, Natureza)
+  - Gerar relatórios de desempenho
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+## 3. Fluxo do Aluno
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
+### Tela Inicial
+- Saldo inicial: 0 moedas
+- Mensagem de boas-vindas: "Olá! Sou o EduCoin Play. Vamos aprender sobre dinheiro hoje?"
+- Botão: Iniciar Missão
 
-## 🪄 Etapas do Desafio
+### Missão
+- Estrutura:
+  - Título da missão
+  - Texto narrativo curto (20–30 palavras)
+  - Opção A: Gastar moedas
+  - Opção B: Guardar moedas
+- Resultado:
+  - Animação simples
+  - Feedback positivo
+- Botão: Continuar
 
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
+### Progresso
+- Indicadores:
+  - Moedas Ganhas: X
+  - Moedas Gastas: Y
+  - Próximo Nível: % concluído
+- Visual: Barra de progresso colorida e responsiva
 
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
+### Perfil do Aluno
+- Mensagem: "Baseado nas suas decisões, o EduCoin Play identifica seu comportamento financeiro."
+- Estilos:
+  - Explorador: gasta mais
+  - Guardião: guarda mais
+  - Equilibrado: mistura escolhas
+- Sugestão de próxima meta
 
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
+## 4. Painel do Professor
+- Personalização de Missões: filtros de interesse (Aventura, Arte, Tecnologia, Natureza)
+- Ações financeiras:
+  - Dar Bônus
+  - Aplicar Multa
+  - Resetar Progresso
+- Relatórios:
+  - Desempenho por aluno
+  - Comparativo por turma
+  - Evolução de hábitos financeiros
 
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+## 5. Tela de Análise de Desempenho
+- Gráfico simples: moedas gastas vs. guardadas
+- Mensagem motivadora: "Você está aprendendo a equilibrar diversão e economia!"
+- Sugestão de meta: "Guarde 10 moedas para desbloquear um tesouro especial!"
 
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+## 6. Regras de Negócio
+- Linguagem simples (sem termos bancários complexos)
+- Apenas duas opções por missão
+- Feedback sempre positivo e motivador
+- Nunca julgar negativamente a criança
+- Avanço manual (a criança clica para seguir)
 
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
+## 7. Critérios de Aceitação
+- [ ] Missões seguem o ciclo de 4 etapas (Título → Texto → Escolha → Feedback)
+- [ ] Feedback positivo exibido em todas as escolhas
+- [ ] Progresso salvo localmente (não se perde ao fechar o app)
+- [ ] Tela de desempenho mostra análise clara e divertida
+- [ ] Interface simples e responsiva para crianças
+- [ ] Login diferenciado para aluno e professor funcionando corretamente
+````
 
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
+Interações com Lovable:
 
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
-```
+> Crie um app de educação financeira infantil com seguite PRD ( Product Requirements Document): {PRD}
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+> Adicione mais missões de educação financeira com temas variados como empreendedorismo, economia e doações.
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+> Adicionar autenticação com login e cadastro para alunos e professores.
 
-### 2. Explorando o Lovable na Prática
+Resultado final no lovable: https://preview--edu-coin-play.lovable.app/auth
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+<img width="1920" height="912" alt="image" src="https://github.com/user-attachments/assets/cc3f7f78-b12b-4afb-83e7-c38358ed7530" />
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+# Funcionalidades do EduCoin Play
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
 
-### 3. Entregando o Desafio na DIO
+## Para Alunos
+- Cadastro e login com nome, idade/turma.  
+- Missões interativas com duas opções: gastar ou guardar moedas.  
+- Feedback positivo em todas as escolhas.  
+- Saldo de moedas e barra de progresso colorida.  
+- Perfis financeiros lúdicos (Explorador, Guardião, Equilibrado).  
+- Tela de análise de desempenho com gráfico de moedas gastas vs. guardadas e metas sugeridas.  
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+## Para Professores
+- Login exclusivo com usuário e senha.  
+- Painel de controle para acompanhar desempenho por turma.  
+- Ações financeiras: bônus, multa, resetar progresso.  
+- Personalização de missões por interesse (Aventura, Arte, Tecnologia, Natureza).  
+- Relatórios de desempenho individual, comparativo por turma e evolução de hábitos financeiros.  
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
 
-## 💬 Conclusão
+## Reflexão
 
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
+### O que funcionou bem?
+O refinamento do PRD funcionou bem porque o Copilot organizou as funcionalidades do app de forma objetiva, dentro do limite de três interações do Lovables.
+
+### O que não funcionou como o esperado?
+Não funcionou como esperado porque eu esperava mais interações com o Lovables, mas aproveitei os recursos disponíveis e validei a aprendizagem com o Vibe Coding.
+
+### O que aprendeu sobre conversar com IAs?
+Eu aprendi que conversar com IAs funciona melhor quando dou instruções claras e objetivas, porque assim o retorno vem mais útil e organizado.
+
+
+
